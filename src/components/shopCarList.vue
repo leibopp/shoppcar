@@ -14,7 +14,7 @@ export default {
   },
 
   methods: {
-    deleteItem(){
+    deleteItem() {
       const currentGoods = this.$store.getters.getGoodsList.find(item => item.id == this.list.id);
       currentGoods.count = 0;
     }

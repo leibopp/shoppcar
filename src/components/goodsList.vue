@@ -32,6 +32,11 @@ export default {
         toast('加入购物车成功');
       }
 
+      if (list.count === 1 && !flag) {
+        this.$emit('open-popup', list.id);
+        return;
+      }
+
       if (flag) {
         this.$store.dispatch('asyncAddGoods', list)
       } else {

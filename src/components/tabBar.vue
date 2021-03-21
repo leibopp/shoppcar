@@ -1,7 +1,7 @@
 <template>
   <div class="tab-box">
     <div :class='{active: !!flag}' @click="tab(true)">商品列表</div>
-    <div :class='{active: !flag}' @click="tab(false)">购物车<span>{{myCount}}</span></div>
+    <div :class='{active: !flag}' @click="tab(false)">购物车<span v-show="myCount > 0">{{myCount}}</span></div>
   </div>
 </template>
 

@@ -1,4 +1,11 @@
 @import './common.scss';
+
+@mixin fixMiddelCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,4 +27,8 @@ body {
 }
 .text-large {
   font-size: $large-font;
+}
+
+.fix-center {
+  @include fixMiddelCenter
 }
