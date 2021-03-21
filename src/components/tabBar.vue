@@ -1,17 +1,26 @@
 <template>
   <div class="tab-box">
-    <div :class='{active: !!flag}' @click="tab(true)">订单</div>
-    <div :class='{active: !flag}' @click="tab(false)">购物车</div>
+    <div :class='{active: !!flag}' @click="tab(true)">商品列表</div>
+    <div :class='{active: !flag}' @click="tab(false)">购物车<span>{{myCount}}</span></div>
   </div>
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
+
 export default {
   data() {
     return {
       flag: true
     }
   },
+
+  computed: {
+    ...mapGetters({
+      myCount: 'getTotalCount'
+    }),
+  },
+
   methods: {
     tab(flag) {
       this.flag = flag;
@@ -41,6 +50,16 @@ export default {
       line-height: 1.6rem;
       &.active {
         color: red;
+      }
+      &:nth-child(2) {
+        span {
+          position: relative;;
+          color: red;
+          font-size: .5rem;
+          left: .5rem;
+          bottom: .5rem
+
+        }
       }
     }
    }

@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="title">PaodingAI shopCar</div>
     <router-view/>
     <tab-bar></tab-bar>
   </div>
@@ -21,6 +22,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   max-width: 100rem;
-  margin: 60px auto;
+  padding-top: 20px;
 }
 </style>

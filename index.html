@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>shoppingcar</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-LCPyFKQyML7mqtS+4XytolfqyqSlcbB3bvDuH9vX2sdQMxRonb/M3b9EmhCNNNrV" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="app"></div>
@@ -22,7 +20,6 @@
   function setRootFontSize() {
     var el = document.documentElement;
     var w = el.clientWidth;
-    // 最大按6Plus，最小按240，因为小于12px可能就有问题了
     if (w > 414) { w = 414; } else if (w < 240) { w = 240; }
     el.style.fontSize = w / 20 + 'px';
   }

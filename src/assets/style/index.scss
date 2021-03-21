@@ -1,0 +1,23 @@
+@import './common.scss';
+body {
+  margin: 0;
+  padding: 0;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-small {
+  font-size: $small-font;
+}
+.text-middle {
+  font-size: $middle-font;
+}
+.text-large {
+  font-size: $large-font;
+}
